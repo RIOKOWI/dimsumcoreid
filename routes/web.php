@@ -38,15 +38,32 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
-    Route::get('/produk')->name('produk');
-    Route::get('/pencatatan')->name('pencatatan');
-    Route::get('/stok')->name('stok');
-    Route::get('/register')->name('register');
+    Route::get('/produk', function () {
+        return view('produk');
+    })->name('produk');
+
+    Route::get('/pencatatan', function () {
+        return view('pencatatan');
+    })->name('pencatatan');
+
+    Route::get('/stok', function () {
+        return view('stok');
+    })->name('stok');
+
+    Route::get('/register', function () {
+        return view('auth.register'); // atau sesuaikan dengan view register kamu
+    })->name('register');
 });
 
 Route::middleware(['auth', 'verified', 'role:owner'])->group(function () {
-    Route::get('/pelanggan')->name('pelanggan');
-    Route::get('/laporan')->name('laporan');
+    Route::get('/pelanggan', function () {
+        return view('pelanggan');
+    })->name('pelanggan');
+
+    Route::get('/laporan', function () {
+        return view('laporan');
+    })->name('laporan');
 });
+
 
 require __DIR__.'/auth.php';
