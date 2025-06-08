@@ -41,6 +41,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::get('/produk')->name('produk');
     Route::get('/pencatatan')->name('pencatatan');
     Route::get('/stok')->name('stok');
+    Route::get('/register')->name('register');
 });
 
 Route::middleware(['auth', 'verified', 'role:owner'])->group(function () {

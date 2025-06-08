@@ -19,18 +19,21 @@
 
                     {{-- menu admin --}}
                     @if ($role === 'admin')
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('produk')" :active="request()->routeIs('produk')">
-                        {{ __('Produk') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
-                        {{ __('Pencatatan Penjualan') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('stok')" :active="request()->routeIs('stok')">
-                        {{ __('Stok') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('produk')" :active="request()->routeIs('produk')">
+                            {{ __('Produk') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                            {{ __('Pencatatan Penjualan') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('stok')" :active="request()->routeIs('stok')">
+                            {{ __('Stok') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                            {{ __('Register') }}
+                        </x-nav-link>
                     @endif
 
                     {{-- menu owner --}}
