@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,25 +12,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/produk', function () {
-    return view('produk');
-})->middleware(['auth', 'verified'])->name('produk');
-
-Route::get('/pencatatan', function () {
-    return view('pencatatan');
-})->middleware(['auth', 'verified'])->name('pencatatan');
-
-Route::get('/stok', function () {
-    return view('stok');
-})->middleware(['auth', 'verified'])->name('stok');
-
-Route::get('/pelanggan', function () {
-    return view('pelanggan');
-})->middleware(['auth', 'verified'])->name('pelanggan');
-
-Route::get('/laporan', function () {
-    return view('laporan');
-})->middleware(['auth', 'verified'])->name('laporan');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,16 +20,15 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
-    Route::get('/produk', function () {
-        return view('produk');
-    })->name('produk');
+    Route::resource('produk', ProdukController::class);
+
 
     Route::get('/pencatatan', function () {
         return view('pencatatan');
     })->name('pencatatan');
 
     Route::get('/stok', function () {
-        return view('stok');
+        return view('stok.index');
     })->name('stok');
 
     Route::get('/register', function () {

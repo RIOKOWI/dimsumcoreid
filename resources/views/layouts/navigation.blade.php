@@ -22,7 +22,7 @@
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('produk')" :active="request()->routeIs('produk')">
+                        <x-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                             {{ __('Produk') }}
                         </x-nav-link>
                         <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
@@ -97,12 +97,40 @@
         </div>
     </div>
 
+    @php
+        $role = Auth::user()->role->value ?? null;
+    @endphp
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            @if ($role === 'admin')
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+                {{ __('Produk') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+                {{ __('Produk') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+                {{ __('Produk') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+                {{ __('Produk') }}
+            </x-responsive-nav-link>
+            @endif
+            @if ($role === 'owner')
+            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('laporan')" :active="request()->routeIs('laporan')">
+                {{ __('Laporan') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('laporan')" :active="request()->routeIs('laporan')">
+                {{ __('Laporan') }}
+            </x-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->
