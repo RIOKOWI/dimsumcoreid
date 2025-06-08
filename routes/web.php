@@ -37,4 +37,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
+    Route::get('/produk')->name('produk');
+    Route::get('/pencatatan')->name('pencatatan');
+    Route::get('/stok')->name('stok');
+});
+
+Route::middleware(['auth', 'verified', 'role:owner'])->group(function () {
+    Route::get('/pelanggan')->name('pelanggan');
+    Route::get('/laporan')->name('laporan');
+});
+
 require __DIR__.'/auth.php';
