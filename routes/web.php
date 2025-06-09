@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\StokController;
@@ -37,9 +38,7 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified', 'role:owner'])->group(function () {
-    Route::get('/pelanggan', function () {
-        return view('pelanggan');
-    })->name('pelanggan');
+    Route::resource('pelanggan', PelangganController::class);
 
     Route::get('/laporan', function () {
         return view('laporan');

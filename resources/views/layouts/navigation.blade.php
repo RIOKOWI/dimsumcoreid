@@ -22,14 +22,14 @@
                         <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                             {{ __('Dashboard') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('stok.index')" :active="request()->routeIs('stok.index')">
+                            {{ __('Stok Bahan') }}
+                        </x-nav-link>
                         <x-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                             {{ __('Produk') }}
                         </x-nav-link>
                         <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
                             {{ __('Pencatatan Penjualan') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('stok.index')" :active="request()->routeIs('stok.index')">
-                            {{ __('Stok Bahan') }}
                         </x-nav-link>
                         <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
                             {{ __('Register') }}
@@ -41,7 +41,7 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('pelanggan')" :active="request()->routeIs('pelanggan')">
+                    <x-nav-link :href="route('pelanggan.index')" :active="request()->routeIs('pelanggan.index')">
                         {{ __('Pelanggan') }}
                     </x-nav-link>
                     <x-nav-link :href="route('laporan')" :active="request()->routeIs('laporan')">
@@ -107,11 +107,11 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
-                {{ __('Produk') }}
-            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('stok.index')" :active="request()->routeIs('stok.index')">
                 {{ __('Stok Bahan') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+                {{ __('Produk') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
@@ -124,8 +124,8 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('laporan')" :active="request()->routeIs('laporan')">
-                {{ __('Laporan') }}
+            <x-responsive-nav-link :href="route('pelanggan.index')" :active="request()->routeIs('pelanggan.index')">
+                {{ __('Pelanggan') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('laporan')" :active="request()->routeIs('laporan')">
                 {{ __('Laporan') }}
