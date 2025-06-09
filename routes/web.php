@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\StokController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,14 +23,13 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
     Route::resource('produk', ProdukController::class);
 
+    Route::resource('stok', StokController::class);
+
+
 
     Route::get('/pencatatan', function () {
         return view('pencatatan');
     })->name('pencatatan');
-
-    Route::get('/stok', function () {
-        return view('stok.index');
-    })->name('stok');
 
     Route::get('/register', function () {
         return view('auth.register'); // atau sesuaikan dengan view register kamu

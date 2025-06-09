@@ -28,8 +28,8 @@
                         <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
                             {{ __('Pencatatan Penjualan') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('stok')" :active="request()->routeIs('stok')">
-                            {{ __('Stok') }}
+                        <x-nav-link :href="route('stok.index')" :active="request()->routeIs('stok.index')">
+                            {{ __('Stok Bahan') }}
                         </x-nav-link>
                         <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
                             {{ __('Register') }}
@@ -110,8 +110,8 @@
             <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
-                {{ __('Produk') }}
+            <x-responsive-nav-link :href="route('stok.index')" :active="request()->routeIs('stok.index')">
+                {{ __('Stok Bahan') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
