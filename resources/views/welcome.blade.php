@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dimsum Core - Nikmati Lezatnya Dimsum Mentai</title>
+  <title>Dimsum Rafi - Nikmati Lezatnya Dimsum Mentai</title>
   <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
 
 </head>
@@ -40,7 +40,7 @@
     <section class="md:w-1/2 text-center md:text-left">
       <h1 class="text-5xl font-extrabold text-red-700 leading-tight mb-6">
         Nikmati Lezatnya <br />
-        <span class="text-yellow-600">Dimsum Tradisional</span> <br />
+        <span class="text-yellow-600">Dimsum Mentai</span> <br />
         dari Pengrajin Lokal
       </h1>
       <p class="text-lg text-gray-700 mb-8">
