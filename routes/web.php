@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LaporanPenjualanController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProfileController;
@@ -37,9 +38,8 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
 Route::middleware(['auth', 'verified', 'role:owner'])->group(function () {
     Route::resource('pelanggan', PelangganController::class);
 
-    Route::get('/laporan', function () {
-        return view('laporan');
-    })->name('laporan');
+    Route::get('/laporan-penjualan', [LaporanPenjualanController::class, 'index'])->name('laporan');
+
 });
 
 

@@ -26,7 +26,9 @@
                 <th class="border p-2">Metode</th>
                 <th class="border p-2">Status</th>
                 <th class="border p-2">Catatan</th>
-                <th class="border p-2">Aksi</th> <!-- Tambahan -->
+                <th class="border p-2">Dibuat</th>         {{-- created_at --}}
+                <th class="border p-2">Diubah</th>         {{-- updated_at --}}
+                <th class="border p-2">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -41,6 +43,8 @@
                 <td class="border p-2 capitalize">{{ $penjualan->metode_pembayaran }}</td>
                 <td class="border p-2 capitalize">{{ $penjualan->status_transaksi }}</td>
                 <td class="border p-2">{{ $penjualan->catatan_transaksi ?? '-' }}</td>
+                <td class="border p-2 text-sm text-gray-700">{{ $penjualan->created_at->format('d M Y H:i') }}</td>
+                <td class="border p-2 text-sm text-gray-700">{{ $penjualan->updated_at->format('d M Y H:i') }}</td>
                 <td class="border p-2 text-center">
                     <a href="{{ route('penjualan.edit', $penjualan->id) }}" class="text-blue-600 hover:underline mr-2">Edit</a>
 
@@ -53,7 +57,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="10" class="text-center p-4 text-gray-500">Belum ada data penjualan.</td>
+                <td colspan="12" class="text-center p-4 text-gray-500">Belum ada data penjualan.</td>
             </tr>
             @endforelse
         </tbody>
