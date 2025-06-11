@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\StokController;
@@ -26,14 +27,10 @@ Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
 
     Route::resource('stok', StokController::class);
 
-
-
-    Route::get('/pencatatan', function () {
-        return view('pencatatan');
-    })->name('pencatatan');
+    Route::resource('penjualan', PenjualanController::class);
 
     Route::get('/register', function () {
-        return view('auth.register'); // atau sesuaikan dengan view register kamu
+        return view('auth.register'); 
     })->name('register');
 });
 

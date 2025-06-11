@@ -18,4 +18,10 @@ class Produk extends Model
         'kategori',
         'gambar',
     ];
+
+        // relasi ke model transaction
+    public function transactions()
+    {
+        return $this->hasMany(Penjualan::class);
+    }
 }

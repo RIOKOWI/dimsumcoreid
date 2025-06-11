@@ -28,7 +28,7 @@
                         <x-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                             {{ __('Produk') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('pencatatan')" :active="request()->routeIs('pencatatan')">
+                        <x-nav-link :href="route('penjualan.index')" :active="request()->routeIs('penjualan.index')">
                             {{ __('Pencatatan Penjualan') }}
                         </x-nav-link>
                         <x-nav-link :href="route('register')" :active="request()->routeIs('register')">
@@ -116,7 +116,7 @@
             <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
+            <x-responsive-nav-link :href="route('penjualan.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
             </x-responsive-nav-link>
             @endif

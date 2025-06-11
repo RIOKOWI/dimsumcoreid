@@ -26,14 +26,7 @@
           <a href="{{ route('login') }}" class="px-5 py-2 rounded border border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition duration-300">
             Login
           </a>
-          {{-- Uncomment jika registrasi diaktifkan --}}
-          {{--
-          @if (Route::has('register'))
-          <a href="{{ route('register') }}" class="px-5 py-2 rounded bg-red-600 text-white hover:bg-red-700 transition duration-300">
-            Register
-          </a>
-          @endif
-          --}}
+          
         @endauth
       </nav>
       @endif
@@ -121,25 +114,25 @@
       />
     </div>
     <!-- Teks Promosi -->
-    <div class="md:w-1/2 text-center md:text-left">
-      <h2 class="text-4xl font-extrabold mb-6">
-        Promo Spesial Bulan Ini!
-      </h2>
-      <p class="text-lg mb-8 max-w-lg mx-auto md:mx-0">
-        Dapatkan diskon 20% untuk semua varian dimsum hanya selama bulan ini.
-        Pesan sekarang dan nikmati sensasi rasa autentik dengan harga terjangkau!
-      </p>
-      <a href="#"
-         class="inline-block bg-yellow-400 text-red-700 font-semibold px-8 py-3 rounded shadow hover:bg-yellow-300 transition duration-300">
-        Pesan Sekarang
-      </a>
+        <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-4xl font-extrabold mb-6">
+                Promo Spesial Bulan Ini!
+            </h2>
+            <p class="text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                Dapatkan diskon 20% untuk semua varian dimsum hanya selama bulan ini.
+                Pesan sekarang dan nikmati sensasi rasa autentik dengan harga terjangkau!
+            </p>
+            <a href="#"
+                class="inline-block bg-yellow-400 text-red-700 font-semibold px-8 py-3 rounded shadow hover:bg-yellow-300 transition duration-300">
+                Pesan Sekarang
+            </a>
+        </div>
     </div>
-  </div>
     </section>
 
   {{-- Footer --}}
   <footer class="bg-yellow-200 text-center py-6 text-red-700 font-semibold select-none">
-    &copy; {{ date('Y') }} Dimsum UMKM. All rights reserved.
+    &copy; {{ date('Y') }} Dimsum Core. All rights reserved.
   </footer>
 
   <script src="https://cdn.tailwindcss.com"></script>
