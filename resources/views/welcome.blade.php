@@ -13,7 +13,7 @@
   <header class="w-full bg-yellow-200 shadow-sm sticky top-0 z-30">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-3xl font-extrabold text-red-700 tracking-tight select-none">
-        Dimsum Core
+        Dimsum Rafi
       </a>
 
       @if (Route::has('login'))
@@ -63,7 +63,49 @@
       />
     </section>
 
+ 
+
+
   </main>
+<!-- Menu Section (2 items only) -->
+<section class="w-full py-16 px-6 bg-white">
+  <div class="max-w-7xl mx-auto text-center mb-12">
+    <h2 class="text-3xl font-extrabold text-red-700 mb-4">Menu Andalan Kami</h2>
+    <p class="text-gray-700 max-w-xl mx-auto">
+      Pilihan dimsum favorit pelanggan yang wajib kamu coba!
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    <!-- Menu 1 -->
+    <div class="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 bg-white">
+      <div class="w-full aspect-[3/4] bg-white flex items-center justify-center">
+        <img src="{{ asset('images/7da4ed4a-a1cc-49d9-9427-256a61740fcf.png') }}"
+             alt="Dimsum Original"
+             class="max-h-full object-contain"/>
+      </div>
+      <div class="p-4 bg-yellow-100">
+        <h3 class="text-lg font-semibold text-red-700 mb-1">Dimsum Original</h3>
+        <p class="text-sm text-gray-700">Dimsum klasik dengan isian ayam dan udang, cocok untuk semua selera.</p>
+      </div>
+    </div>
+
+    <!-- Menu 2 -->
+    <div class="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 bg-white">
+      <div class="w-full aspect-[3/4] bg-white flex items-center justify-center">
+        <img src="{{ asset('images/85e4a88f-4748-4089-b03f-130cb9fc7152.png') }}"
+             alt="Dimsum Mentai"
+             class="max-h-full object-contain"/>
+      </div>
+      <div class="p-4 bg-yellow-100">
+        <h3 class="text-lg font-semibold text-red-700 mb-1">Dimsum Mentai</h3>
+        <p class="text-sm text-gray-700">Topping saus mentai spesial yang creamy dan gurih menggoda.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   {{-- Features Section --}}
   <section class="bg-yellow-100 py-16 px-6">
@@ -107,7 +149,7 @@
     <!-- Gambar Promosi -->
     <div class="md:w-1/2 max-w-md mx-auto md:mx-0">
       <img
-        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+        src="{{ asset('images/GoFood-Banner---Logo-Big-promo-tokopedia_1.jpg') }}"
         alt="Promo Dimsum Spesial"
         class="rounded-xl shadow-lg object-cover w-full h-full max-h-[400px]"
         loading="lazy"
@@ -116,11 +158,10 @@
     <!-- Teks Promosi -->
         <div class="md:w-1/2 text-center md:text-left">
             <h2 class="text-4xl font-extrabold mb-6">
-                Promo Spesial Bulan Ini!
+                Dimsum Rafi tersedia di GoFood!
             </h2>
             <p class="text-lg mb-8 max-w-lg mx-auto md:mx-0">
-                Dapatkan diskon 20% untuk semua varian dimsum hanya selama bulan ini.
-                Pesan sekarang dan nikmati sensasi rasa autentik dengan harga terjangkau!
+                Lagi mager keluar? Tenang, tinggal pesan lewat GoFood dan nikmati dimsum hangat, lezat, dan autentik langsung ke depan pintu rumahmu. Cobain sekarang!
             </p>
             <a href="#"
                 class="inline-block bg-yellow-400 text-red-700 font-semibold px-8 py-3 rounded shadow hover:bg-yellow-300 transition duration-300">
@@ -130,9 +171,42 @@
     </div>
     </section>
 
+    <!-- Instagram Section -->
+<section class="bg-white py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold text-red-700 mb-4">Ikuti Instagram Kami</h2>
+    <p class="text-gray-700 mb-8 max-w-xl mx-auto">
+      Dapatkan update menu terbaru, promo spesial, dan konten menarik lainnya langsung dari Instagram kami!
+    </p>
+    <a href="https://www.instagram.com/usernamemu" target="_blank"
+       class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300 font-semibold">
+      @dimsumcore.id
+    </a>
+    
+    <!-- Instagram Embed (opsional jika ingin tampil feed) -->
+    <!-- <div class="mt-10">
+      <iframe src="https://www.instagram.com/p/C0NT0..." class="mx-auto w-full max-w-md h-[480px] border-none" loading="lazy"></iframe>
+    </div> -->
+  </div>
+</section>
+
+<!-- Lokasi Booth Offline -->
+<section class="bg-yellow-100 py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-extrabold text-red-700 mb-4">Kunjungi Booth Kami</h2>
+    <p class="text-gray-700 mb-8 max-w-xl mx-auto">
+      Selain pesan online, kamu juga bisa langsung datang ke booth kami dan nikmati dimsum hangat di tempat!
+    </p>
+    <div class="w-full h-[400px] rounded-lg overflow-hidden shadow-lg max-w-4xl mx-auto">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d833.9110293068813!2d106.55412575065388!3d-6.1613205726860345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1749860401534!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
   {{-- Footer --}}
   <footer class="bg-yellow-200 text-center py-6 text-red-700 font-semibold select-none">
-    &copy; {{ date('Y') }} Dimsum Core. All rights reserved.
+    &copy; {{ date('Y') }} Dimsum Rafi. All rights reserved.
   </footer>
 
   <script src="https://cdn.tailwindcss.com"></script>

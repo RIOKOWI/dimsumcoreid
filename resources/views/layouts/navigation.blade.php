@@ -5,8 +5,15 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
+                    <a href="{{ route('dashboard') }}" style="
+                    color: red;
+                    font-weight: bold;
+                    text-decoration: none;
+                    font-size: 24px;
+                    " 
+                    onmouseover="this.style.color='yellow'" 
+                    onmouseout="this.style.color='red'">
+                    Dimsum Rafi
                     </a>
                 </div>
 
@@ -113,11 +120,11 @@
             <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
                 {{ __('Produk') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('produk.index')" :active="request()->routeIs('produk.index')">
-                {{ __('Produk') }}
+            <x-responsive-nav-link :href="route('penjualan.index')" :active="request()->routeIs('penjualan.index')">
+                {{ __('Penjualan') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('penjualan.index')" :active="request()->routeIs('produk.index')">
-                {{ __('Produk') }}
+            <x-responsive-nav-link :href="route('register')" :active="request()->routeIs('register')">
+                {{ __('Register') }}
             </x-responsive-nav-link>
             @endif
             @if ($role === 'owner')
