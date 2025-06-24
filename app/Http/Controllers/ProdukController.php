@@ -22,15 +22,18 @@ class ProdukController extends Controller
         return view('produk.create');
     }
 
+    
+
     public function store(Request $request)
     {
+    
         $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
             'harga' => 'required|integer',
             'stok' => 'required|integer',
-            'kategori' => 'required|in:siap saji,frozen', // tambahkan ini
-            'gambar' => 'nullable|image|max:2048',
+            'kategori' => 'required|in:siap saji,frozen', 
+            'gambar' => 'nullable|image|max:5120',
         ]);
 
         $gambarPath = null;
@@ -68,7 +71,7 @@ class ProdukController extends Controller
             'harga' => 'required|integer',
             'stok' => 'required|integer',
             'kategori' => 'required|in:siap saji,frozen', 
-            'gambar' => 'nullable|image|max:2048',
+            'gambar' => 'nullable|image|max:5120',
         ]);
 
         if ($request->hasFile('gambar')) {

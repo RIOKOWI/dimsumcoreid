@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dimsum Rafi - Nikmati Lezatnya Dimsum Mentai</title>
+  <meta name="description" content="Dimsum Rafi - Dimsum lokal autentik dan lezat, tersedia di GoFood dan bisa dipesan lewat WhatsApp.">
+  <title>Dimsum Rafi</title>
+  <link rel="icon" href="{{ asset('images/dumplings.png') }}">
   <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
 
 </head>
@@ -47,7 +49,8 @@
         Kami menyediakan dimsum segar dan autentik dengan resep turun-temurun yang siap memanjakan lidah Anda. Pesan sekarang dan rasakan kenikmatannya!
       </p>
       @guest
-      <a class="inline-block px-8 py-3 bg-red-600 text-white rounded-md shadow hover:bg-red-700 transition duration-300 font-semibold">
+      <a href="https://wa.me/6281398234141?text=Halo%20apakah%20Dimsumnya%20ready?
+" target="_blank" class="inline-block px-8 py-3 bg-red-600 text-white rounded-md shadow hover:bg-red-700 transition duration-300 font-semibold">
         Pesan Sekarang
       </a>
       @endguest
@@ -163,7 +166,7 @@
             <p class="text-lg mb-8 max-w-lg mx-auto md:mx-0">
                 Lagi mager keluar? Tenang, tinggal pesan lewat GoFood dan nikmati dimsum hangat, lezat, dan autentik langsung ke depan pintu rumahmu. Cobain sekarang!
             </p>
-            <a href="#"
+            <a href="https://gofood.link/a/Nqc9BEY" target="_blank"
                 class="inline-block bg-yellow-400 text-red-700 font-semibold px-8 py-3 rounded shadow hover:bg-yellow-300 transition duration-300">
                 Pesan Sekarang
             </a>
@@ -178,7 +181,7 @@
     <p class="text-gray-700 mb-8 max-w-xl mx-auto">
       Dapatkan update menu terbaru, promo spesial, dan konten menarik lainnya langsung dari Instagram kami!
     </p>
-    <a href="https://www.instagram.com/usernamemu" target="_blank"
+    <a href="https://www.instagram.com/dimsumcore.id" target="_blank"
        class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition duration-300 font-semibold">
       @dimsumcore.id
     </a>

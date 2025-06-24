@@ -127,6 +127,7 @@
                 {{ __('Register') }}
             </x-responsive-nav-link>
             @endif
+            
             @if ($role === 'owner')
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
